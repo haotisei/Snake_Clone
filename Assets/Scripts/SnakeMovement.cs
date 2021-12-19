@@ -7,22 +7,6 @@ public class SnakeMovement : MonoBehaviour
     public float Speed;
     public Rigidbody componentRigidbody;
 
-
-    private void Update()
-    {
-
-        Move();
-    }
-
-
-    
-     private void FixedUpdate()
-    {
-   
-       
-    }
-   
-
     public void ReachFinish()
     {
         componentRigidbody.velocity = Vector3.zero;

@@ -6,8 +6,8 @@ public class Control : MonoBehaviour
 {
     public SnakeMovement Snake;
 
-    void Start()
+    void Update()
     {
-       
+        Snake.Move();
     }
 }
