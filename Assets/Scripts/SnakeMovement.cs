@@ -4,16 +4,43 @@ using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
-    public float ForwardSpeed = 5;
-    public float Sensitivity = 10;
-    void Start()
+    public float Speed;
+    public Rigidbody componentRigidbody;
+
+
+    private void Update()
     {
-        
+
+        Move();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    
+     private void FixedUpdate()
     {
-        
+   
+       
+    }
+   
+
+    public void ReachFinish()
+    {
+        componentRigidbody.velocity = Vector3.zero;
+    }
+
+    public void Move()
+    {
+        transform.Translate(Vector3.forward * Speed * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            componentRigidbody.velocity = Vector2.left * Speed;
+        }
+
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            componentRigidbody.velocity = Vector2.right * Speed;
+        }
     }
 }
+    
