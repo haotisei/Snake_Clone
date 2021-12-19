@@ -1,31 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
-
-    public Control Control;
     public SnakeMovement Snake;
+    public static GameState gameState;
 
-    public enum State
+    public enum GameState
     {
+        Menu,
         Playing,
         Won,
         Loss,
     }
 
-    private void Start()
-    {}
-
-    public State CurrentState { get; private set; }
-
-    public void OnPlayerReachedFinish()
+    public void SetGame()
     {
-        if (CurrentState != State.Playing) return;
-        CurrentState = State.Won;
-        Snake.ReachFinish();
-        Control.enabled = false;
-        Debug.Log("Finish!");
+        gameState = GameState.Playing;
+        Debug.Log("Started");
+    }
+
+    void Awake()
+    {
+        SetGame();
+    }
+
+    public void GameWon()
+    {
+        gameState = GameState.Won;
+        Debug.Log("Won");
     }
 }

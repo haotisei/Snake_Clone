@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class Finish : MonoBehaviour
 {
+    public Game Game;
     private void OnCollisionEnter(Collision collision)
-    {
-        if (!collision.collider.TryGetComponent(out SnakeMovement player)) return;
+    
+        {
+        Game.GameWon();
 
-        player.ReachFinish();
 
+        
+        Debug.Log("Player Entered");
 
     }
 }
