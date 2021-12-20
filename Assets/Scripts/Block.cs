@@ -8,15 +8,47 @@ using Random = UnityEngine.Random;
 public class Block : MonoBehaviour
 {
     int health;
+  
     public int minHP;
     public int maxHP;
+    public Renderer renderer;
+    float color;
 
-    public TMP_Text points; 
+    public Gradient g;
+    GradientColorKey[] gck;
+    GradientAlphaKey[] gak;
+
+    public TMP_Text points;
+
+    void Awake()
+    {
+        health = Random.Range(minHP, maxHP + 1);
+        renderer = GetComponent<Renderer>();
+    }
 
     void Start()
     {
-        health = Random.Range(minHP, maxHP+1);
+         /*g = new Gradient();
+        gck = new GradientColorKey[2];
+        gck[0].color = Color.red;
+        gck[0].time = 0.0f;
+        gck[1].color = Color.black;
+        gck[1].time = 1.0f;
+
+        gak = new GradientAlphaKey[2];
+        gak[0].alpha = 1.0f;
+        gak[0].time = 1.0f;
+        gak[1].alpha = 1.0f;
+        gak[1].time = 1.0f;
+
+        g.SetKeys(gck, gak);
+         */
+
+        color = (float)(health) / 50;
+        Debug.Log(color);
+
         points.text = health.ToString();
+        renderer.material.color = g.Evaluate(color);
     }
 
     IEnumerator Hit()
