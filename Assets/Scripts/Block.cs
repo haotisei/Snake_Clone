@@ -1,26 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
+using Random = UnityEngine.Random;
 
 public class Block : MonoBehaviour
 {
-    int health = 10;
+    int health;
+    public int minHP;
+    public int maxHP;
+
+    public TMP_Text points; 
 
     void Start()
     {
-       
+        health = Random.Range(minHP, maxHP+1);
+        points.text = health.ToString();
     }
 
-    private void Hit()
+    IEnumerator Hit()
     {
         health--;
-
-        if(health <= 0){ this.gameObject.SetActive(false); }
+        points.text = health.ToString();
+        Debug.Log("HP Left" + health);
+        yield return new WaitForSeconds(3f);
+       
+        
     }
 
   private void OnCollisionStay(Collision collision)
     {
-        Hit();
-        Debug.Log("Hit Block");
+        StartCoroutine(Hit());
+        if (health <= 0)
+        { StopCoroutine(Hit());
+        this.gameObject.SetActive(false); }
     }
 }
