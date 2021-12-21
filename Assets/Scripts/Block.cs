@@ -40,25 +40,6 @@ public class Block : MonoBehaviour
         points.text = health.ToString();
     }
 
-    /*
-    IEnumerator Hit()
-    {
-        health--;
-        Debug.Log("HP Left" + health);
-        yield return new WaitForSeconds(3f);
-       
-        
-    }
-
-  private void OnCollisionStay(Collision collision)
-    {
-        StartCoroutine(Hit());
-        if (health <= 0)
-        { StopCoroutine(Hit());
-        this.gameObject.SetActive(false); }
-    }
-    */
-
     public void BlockHit()
     {
         health--;

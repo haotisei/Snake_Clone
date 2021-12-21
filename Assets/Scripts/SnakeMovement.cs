@@ -8,7 +8,7 @@ public class SnakeMovement : MonoBehaviour
 {
     public float Speed;
     public Rigidbody componentRigidbody;
-    private int Length = 4;
+    public int Length = 4;
     public TextMeshPro SnakeHP;
     private Block Block;
 
