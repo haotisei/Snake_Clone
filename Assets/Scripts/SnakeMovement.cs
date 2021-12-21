@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 
 public class SnakeMovement : MonoBehaviour
 {
     public float Speed;
     public Rigidbody componentRigidbody;
+    private int Length = 4;
+    public TextMeshPro SnakeHP;
 
     void Update()
     {
-        
+        SnakeHP.text = Length.ToString();
         
     }
     private void FixedUpdate()

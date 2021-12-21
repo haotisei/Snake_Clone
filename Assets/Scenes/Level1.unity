@@ -2554,6 +2554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 5
   componentRigidbody: {fileID: 740019666}
+  SnakeHP: {fileID: 154291058}
 --- !u!54 &740019666
 Rigidbody:
   m_ObjectHideFlags: 0
