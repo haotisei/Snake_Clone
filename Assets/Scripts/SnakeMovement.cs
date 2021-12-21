@@ -11,16 +11,22 @@ public class SnakeMovement : MonoBehaviour
     public int Length = 4;
     public TextMeshPro SnakeHP;
     private Block Block;
+    private SnakeTail snakeTail;
 
     public Game Game;
+
+    void Start()
+    {
+        componentRigidbody = GetComponent<Rigidbody>();
+        snakeTail = GetComponent<SnakeTail>();
+
+       // for (int i = 0; i < Length; i++) SnakeTail.AddBody();
+    }
 
     void Update()
     {
         SnakeHP.text = Length.ToString();
 
-    }
-    private void FixedUpdate()
-    {
         Move();
 
         if (Input.GetKey(KeyCode.LeftArrow))
@@ -32,7 +38,14 @@ public class SnakeMovement : MonoBehaviour
         {
             componentRigidbody.velocity = Vector2.right * Speed;
         }
+
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Length++;
+            snakeTail.AddBody();
+        }
     }
+
 
     public void ReachFinish()
     {
