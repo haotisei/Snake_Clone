@@ -35,10 +35,14 @@ public class Block : MonoBehaviour
         renderer.material.color = g.Evaluate(color);
     }
 
+    void Update()
+    {
+        points.text = health.ToString();
+    }
+
     IEnumerator Hit()
     {
         health--;
-        points.text = health.ToString();
         Debug.Log("HP Left" + health);
         yield return new WaitForSeconds(3f);
        
