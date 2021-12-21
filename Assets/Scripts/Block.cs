@@ -7,7 +7,7 @@ using Random = UnityEngine.Random;
 
 public class Block : MonoBehaviour
 {
-    int health;
+    public int health;
   
     public int minHP;
     public int maxHP;
@@ -40,6 +40,7 @@ public class Block : MonoBehaviour
         points.text = health.ToString();
     }
 
+    /*
     IEnumerator Hit()
     {
         health--;
@@ -55,5 +56,16 @@ public class Block : MonoBehaviour
         if (health <= 0)
         { StopCoroutine(Hit());
         this.gameObject.SetActive(false); }
+    }
+    */
+
+    public void BlockHit()
+    {
+        health--;
+        Debug.Log("HP Left" + health);
+        if (health <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
 }

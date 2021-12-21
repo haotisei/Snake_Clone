@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Game : MonoBehaviour
 {
@@ -31,5 +32,12 @@ public class Game : MonoBehaviour
     {
         gameState = GameState.Won;
         Debug.Log("Won");
+    }
+
+    public void GameLost()
+    {
+        gameState = GameState.Loss;
+        Debug.Log("Lost");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

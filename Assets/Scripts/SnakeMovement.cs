@@ -10,11 +10,14 @@ public class SnakeMovement : MonoBehaviour
     public Rigidbody componentRigidbody;
     private int Length = 4;
     public TextMeshPro SnakeHP;
+    private Block Block;
+
+    public Game Game;
 
     void Update()
     {
         SnakeHP.text = Length.ToString();
-        
+
     }
     private void FixedUpdate()
     {
@@ -47,5 +50,41 @@ public class SnakeMovement : MonoBehaviour
             componentRigidbody.velocity = Vector3.zero;
         }
     }
+
+    public void SnakeHit()
+    {
+        Length--;
+        Debug.Log("Player HP" + Length);
+
+        if (Length <= 0)
+        {
+            Die();
+        }
+    }
+
+
+    public void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.TryGetComponent(out Block Block))
+        {
+          
+            Block.BlockHit();
+            SnakeHit();
+            if (Block.health <= 0)
+            {
+                Block.gameObject.SetActive(false);
+            }
+        }
+    
+    }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
+
+        //Game.GameLost();
+    }
+
+    
 }
     
