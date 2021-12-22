@@ -964,7 +964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6214216645756239813, guid: 6dd42e2c5b8ff417aa3a8f1a05582670, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -2.0053613
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6214216645756239813, guid: 6dd42e2c5b8ff417aa3a8f1a05582670, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4057,7 +4057,6 @@ GameObject:
   - component: {fileID: 1696979900}
   - component: {fileID: 1696979905}
   - component: {fileID: 1696979904}
-  - component: {fileID: 1696979903}
   - component: {fileID: 1696979902}
   - component: {fileID: 1696979901}
   - component: {fileID: 1696979906}
@@ -4111,19 +4110,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: -0.000000029802322, y: 0, z: 0}
---- !u!114 &1696979903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696979899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e490df479ac24c8daa3b4f16c98f734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Game: {fileID: 1922125216}
 --- !u!23 &1696979904
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5081,7 +5067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6214216645756239813, guid: 6dd42e2c5b8ff417aa3a8f1a05582670, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.9953613
+      value: -0.18999958
       objectReference: {fileID: 0}
     - target: {fileID: 6214216645756239813, guid: 6dd42e2c5b8ff417aa3a8f1a05582670, type: 3}
       propertyPath: m_AnchoredPosition.y

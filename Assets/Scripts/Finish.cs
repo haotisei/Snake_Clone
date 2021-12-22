@@ -9,7 +9,7 @@ public class Finish : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     
         {
-        PlayerPrefs.SetInt("SnakeHP", Snake.Length);
+        
         
         Game.GameWon();
 
