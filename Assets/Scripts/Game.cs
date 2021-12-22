@@ -16,17 +16,24 @@ public class Game : MonoBehaviour
         Won,
         Loss,
     }
+    void Awake()
+    {
+        SetGame();
+        if (StatsSave.SnakeHP <= 0)
+            StatsSave.SnakeHP = 4;
+    }
+
+    void Update()
+    {
+        if (StatsSave.HighScore < StatsSave.Score)
+            StatsSave.HighScore = StatsSave.Score;
+    }
 
     public void SetGame()
     {
         gameState = GameState.Playing;
         Debug.Log("Started");
-       
-    }
 
-    void Awake()
-    {
-        SetGame();
     }
 
     public void GameWon()

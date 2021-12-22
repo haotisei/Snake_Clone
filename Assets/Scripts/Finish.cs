@@ -5,14 +5,16 @@ using UnityEngine;
 public class Finish : MonoBehaviour
 {
     public Game Game;
-    public SnakeMovement Snake;
+    public GameObject MenuScreen;
+    public GameObject PlayScreen;
     private void OnCollisionEnter(Collision collision)
     
         {
         
         
         Game.GameWon();
-
+        PlayScreen.SetActive(false);
+        MenuScreen.SetActive(true);
 
         
         Debug.Log("Player Entered");

@@ -38,6 +38,8 @@ public class Block : MonoBehaviour
     void Update()
     {
         points.text = health.ToString();
+        if (StatsSave.HighScore < StatsSave.Score)
+            StatsSave.HighScore = StatsSave.Score;
     }
 
     public void BlockHit()
