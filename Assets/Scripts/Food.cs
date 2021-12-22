@@ -24,7 +24,7 @@ public class Food : MonoBehaviour
     {
         if (collision.collider.TryGetComponent(out SnakeMovement Snake))
         {
-            Snake.Length += FoodPoint;
+            StatsSave.SnakeHP += FoodPoint;
             this.gameObject.SetActive(false);
         }
     }

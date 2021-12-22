@@ -302,12 +302,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b1ec126d3644b12a8beff2728ec444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
   minHP: 1
   maxHP: 5
   renderer: {fileID: 0}
   g:
     serializedVersion: 2
-    key0: {r: 1, g: 0, b: 0, a: 1}
+    key0: {r: 0.972549, g: 0, b: 0.009337557, a: 1}
     key1: {r: 0, g: 0, b: 0, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}

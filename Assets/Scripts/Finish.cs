@@ -5,9 +5,12 @@ using UnityEngine;
 public class Finish : MonoBehaviour
 {
     public Game Game;
+    public SnakeMovement Snake;
     private void OnCollisionEnter(Collision collision)
     
         {
+        PlayerPrefs.SetInt("SnakeHP", Snake.Length);
+        
         Game.GameWon();
 
 
