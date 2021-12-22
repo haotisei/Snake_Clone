@@ -43,6 +43,7 @@ public class Block : MonoBehaviour
     public void BlockHit()
     {
         health--;
+        StatsSave.Score++;
         Debug.Log("HP Left" + health);
         if (health <= 0)
         {

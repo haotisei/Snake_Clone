@@ -5,9 +5,13 @@ using UnityEngine;
 public class StatsSave : MonoBehaviour
 {
     public static int SnakeHP = 40;
+    public static int Score;
+    public static int HighScore;
 
-    public void AddHP()
+    private void Update()
     {
-        SnakeHP++;
+        if (HighScore < Score)
+            HighScore = Score;
     }
+   
 }

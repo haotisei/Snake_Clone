@@ -21,6 +21,7 @@ public class Game : MonoBehaviour
     {
         gameState = GameState.Playing;
         Debug.Log("Started");
+       
     }
 
     void Awake()
@@ -39,5 +40,10 @@ public class Game : MonoBehaviour
         gameState = GameState.Loss;
         Debug.Log("Lost");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Menu()
+    {
+        gameState = GameState.Menu;
     }
 }
