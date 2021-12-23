@@ -5930,3 +5930,11 @@ Received Import Request.
 Start importing Assets/Other Assets/Fonts/UIsprite/JazzCreateFontUI1024x512.png using Guid(d61d12d2d79f7244e9f4de798743e099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e3f80e0fa05639682a725fbcd3d21c') in 0.173261 seconds 
   Import took 0.190005 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 110.283026 seconds.
+  path: Assets/Scenes/Level1.unity
+  artifactKey: Guid(97d9dbcf29efa4f09b085017c4e629a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Level1.unity using Guid(97d9dbcf29efa4f09b085017c4e629a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a21e0099d7e4f90fe2c9fc9481e33e05') in 0.204794 seconds 
+  Import took 0.260416 seconds .
+
