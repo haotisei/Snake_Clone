@@ -8,26 +8,28 @@ public class SnakeMovement : MonoBehaviour
 {
     public float Speed;
     public Rigidbody componentRigidbody;
-    public int Length = 4;
+    public int Length;
     public TextMeshPro SnakeHP;
     private Block Block;
-    private SnakeTail snakeTail;
+    public GameObject PlayScreen;
+    public GameObject LoseScreen;
+    public AudioSource Sound;
+    
 
     public Game Game;
 
     void Start()
     {
         componentRigidbody = GetComponent<Rigidbody>();
-        snakeTail = GetComponent<SnakeTail>();
-
-       // for (int i = 0; i < Length; i++) SnakeTail.AddBody();
+        Sound = Instantiate(Sound);
     }
 
     void Update()
     {
+        Length = StatsSave.SnakeHP;
         SnakeHP.text = Length.ToString();
 
-        Move();
+       Move();
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
@@ -38,14 +40,22 @@ public class SnakeMovement : MonoBehaviour
         {
             componentRigidbody.velocity = Vector2.right * Speed;
         }
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            Length++;
-            snakeTail.AddBody();
-        }
     }
 
+    public void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.TryGetComponent(out Block Block))
+        {
+
+            Block.BlockHit();
+            SnakeHit();
+            if (Block.health <= 0)
+            {
+                Block.gameObject.SetActive(false);
+            }
+        }
+
+    }
 
     public void ReachFinish()
     {
@@ -66,7 +76,8 @@ public class SnakeMovement : MonoBehaviour
 
     public void SnakeHit()
     {
-        Length--;
+        StatsSave.SnakeHP--;
+        Sound.Play();
         Debug.Log("Player HP" + Length);
 
         if (Length <= 0)
@@ -75,27 +86,13 @@ public class SnakeMovement : MonoBehaviour
         }
     }
 
-
-    public void OnCollisionStay(Collision collision)
-    {
-        if (collision.collider.TryGetComponent(out Block Block))
-        {
-          
-            Block.BlockHit();
-            SnakeHit();
-            if (Block.health <= 0)
-            {
-                Block.gameObject.SetActive(false);
-            }
-        }
-    
-    }
-
     public void Die()
     {
         gameObject.SetActive(false);
-
-        //Game.GameLost();
+        StatsSave.Score = 0;
+        PlayScreen.SetActive(false);
+        LoseScreen.SetActive(true);
+      
     }
 
     
