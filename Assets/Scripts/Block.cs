@@ -15,8 +15,6 @@ public class Block : MonoBehaviour
     float color;
 
     public Gradient g;
-    GradientColorKey[] gck;
-    GradientAlphaKey[] gak;
 
     public TMP_Text points;
 
@@ -45,6 +43,7 @@ public class Block : MonoBehaviour
     public void BlockHit()
     {
         health--;
+        
         StatsSave.Score++;
         Debug.Log("HP Left" + health);
         if (health <= 0)
@@ -52,4 +51,5 @@ public class Block : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
+
 }
