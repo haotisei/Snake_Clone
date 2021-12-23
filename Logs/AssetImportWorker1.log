@@ -22,63 +22,63 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-55336
+62014
 Successfully changed project path to: /Users/gabumon/Desktop/Karina/GitHub/Snake_Clone
 /Users/gabumon/Desktop/Karina/GitHub/Snake_Clone
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 279.94 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 137.08 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.25f1 (9b9180224418)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.25f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/gabumon/Desktop/Karina/GitHub/Snake_Clone/Assets
 GfxDevice: creating device client; threaded=0
-2021-12-18 23:00:52.791 Unity[14177:519757] iMac preferred device: Intel(R) Iris(TM) Pro Graphics 6200 (low power)
-2021-12-18 23:00:52.791 Unity[14177:519757] Metal devices available: 1
-2021-12-18 23:00:52.791 Unity[14177:519757] 0: Intel(R) Iris(TM) Pro Graphics 6200 (low power)
-2021-12-18 23:00:52.791 Unity[14177:519757] Using device Intel(R) Iris(TM) Pro Graphics 6200 (low power)
+2021-12-23 19:05:54.365 Unity[15779:924120] iMac preferred device: Intel(R) Iris(TM) Pro Graphics 6200 (low power)
+2021-12-23 19:05:54.365 Unity[15779:924120] Metal devices available: 1
+2021-12-23 19:05:54.365 Unity[15779:924120] 0: Intel(R) Iris(TM) Pro Graphics 6200 (low power)
+2021-12-23 19:05:54.366 Unity[15779:924120] Using device Intel(R) Iris(TM) Pro Graphics 6200 (low power)
 Initializing Metal device caps: Intel(R) Iris(TM) Pro Graphics 6200
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.25f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.25f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.25f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56177
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56779
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.25f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.25f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000841 seconds.
+Registered in 0.052538 seconds.
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 39.22 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 63.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.875 seconds
+- Completed reload, in  0.909 seconds
 Domain Reload Profiling:
-	ReloadAssembly (876ms)
-		BeginReloadAssembly (77ms)
+	ReloadAssembly (910ms)
+		BeginReloadAssembly (75ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (702ms)
-			LoadAssemblies (76ms)
+		EndReloadAssembly (687ms)
+			LoadAssemblies (77ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (236ms)
+			SetupTypeCache (239ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (48ms)
-			SetupLoadedEditorAssemblies (299ms)
+			SetupLoadedEditorAssemblies (288ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (12ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (39ms)
+				RefreshPlugins (63ms)
 				BeforeProcessingInitializeOnLoad (10ms)
 				ProcessInitializeOnLoadAttributes (124ms)
-				ProcessInitializeOnLoadMethodAttributes (113ms)
+				ProcessInitializeOnLoadMethodAttributes (83ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.130729 seconds.
+Registered in 0.089729 seconds.
