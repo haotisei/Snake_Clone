@@ -7,11 +7,12 @@ public class Food : MonoBehaviour
 {
     int FoodPoint;
     public TextMeshPro Point;
+    public AudioSource Sound;
 
-    // Start is called before the first frame update
     void Start()
     {
         FoodPoint = Random.Range(1, 6);
+        Sound = Instantiate(Sound);
     }
 
     // Update is called once per frame
@@ -25,6 +26,7 @@ public class Food : MonoBehaviour
         if (collision.collider.TryGetComponent(out SnakeMovement Snake))
         {
             StatsSave.SnakeHP += FoodPoint;
+            Sound.Play();
             this.gameObject.SetActive(false);
         }
     }

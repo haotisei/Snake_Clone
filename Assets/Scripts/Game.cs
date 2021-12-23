@@ -21,12 +21,13 @@ public class Game : MonoBehaviour
         SetGame();
         if (StatsSave.SnakeHP <= 0)
             StatsSave.SnakeHP = 4;
+
+        GameObject.FindGameObjectWithTag("Music").GetComponent<Music>().PlayMusic();
     }
 
     void Update()
     {
-        if (StatsSave.HighScore < StatsSave.Score)
-            StatsSave.HighScore = StatsSave.Score;
+        
     }
 
     public void SetGame()

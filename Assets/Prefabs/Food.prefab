@@ -281,3 +281,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Point: {fileID: 972069265117067432}
+  Sound: {fileID: 3097846415151950195, guid: 67c43dd9694264ee0b948c81682dd4ad, type: 3}

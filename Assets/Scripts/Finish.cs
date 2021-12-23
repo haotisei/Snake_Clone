@@ -15,7 +15,7 @@ public class Finish : MonoBehaviour
         Game.GameWon();
         PlayScreen.SetActive(false);
         MenuScreen.SetActive(true);
-
+        StatsSave.Score = 0;
         
         Debug.Log("Player Entered");
 
